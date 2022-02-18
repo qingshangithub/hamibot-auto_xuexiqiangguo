@@ -340,6 +340,7 @@ if (!finish_list[1] || !finish_list[2]) {
     my_click_clickable('百灵');
     sleep(random_time(delay_time / 2));
     my_click_clickable('竖');
+    my_click_clickable('竖');
     // 等待视频加载
     sleep(random_time(delay_time * 3));
     // 点击第一个视频
@@ -939,7 +940,7 @@ if (!finish_list[4] && weekly_answer_scored < 4) {
 /*
 **********专项答题*********
 */
-if (!finish_list[5] && special_answer_scored < 9) {
+if (!finish_list[5] && special_answer_scored <= 9) {
     sleep(random_time(delay_time));
     if (!className('android.view.View').depth(21).text('学习积分').exists()) back_track();
     entry_model(9);
